@@ -1,0 +1,31 @@
+{% extends 'dashboard/base.html'%}
+{%load static%}
+
+    {%block title%}<title>Dashboard | Read Message</title>{%endblock%}
+    {% block home_button_active%}{%endblock%}
+    {% block message_button_active%}active{%endblock%}
+     {%block content%}
+      <!--content-->
+      <div class="d-flex flex-column w-100 dashboardcontent justify-content-start">
+        <div class="container mt-3">
+            <div class="d-flex flex-column justify-content-start text-start">
+                <h6>Read Message</h6>
+                <p><a href="{%url 'dashboard:dashboard_view'%}">Home</a> <i class="fa-solid fa-chevron-right"></i><a href="{%url 'dashboard:messages_view'%}"> Messages</a>  <i class="fa-solid fa-chevron-right"></i> Read Message</p>                
+            </div>
+            <div class="d-flex flex-column rounded py-3 px-2 shadow-sm mb-3 ">
+                <h6 class="text-start">The Sender name: {{message.name}}</h6>
+                <h6 class="text-start">Email: <a href="maito:{{message.email}}">{{message.email}}</a></h6>
+                <h6 class="text-start">Date and Time: {{message.created_at}}</h6>
+                <hr/>
+                <div class="d-flex flex-column justify-content-between min-vh-48">
+                    <p class="text-start">{{message.message}}</p>    
+                    <a href="{%url 'dashboard:messages_view'%}" class="btn btn-primary">Back to messages</a>        
+    
+
+                </div>
+            </div>
+
+          </div>
+      </div>
+          {%endblock%}
+      

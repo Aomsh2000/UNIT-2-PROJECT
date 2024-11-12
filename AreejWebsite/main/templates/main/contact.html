@@ -1,0 +1,78 @@
+{% extends 'main/base.html'%}
+{%load static%}
+
+    {%block title%}<title>Contact Me</title>{%endblock%}
+
+     {%block content%}
+     <header class="d-flex justify-content-between">
+        <h4 class="cinzel-font">Areej</h4>
+      <nav class="d-flex">
+        <a href="" class="careerlink">Career</a>
+        <a href="">Free Space</a>
+        <a href="{%url 'main:contact_view'%}" class="contactlink d-flex text-center"><i class="fa-solid fa-message"></i> Contact</a>
+      </nav>
+      </header>
+      
+     {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    <div class="container-fluid w-100 ">
+        <section class="row d-flex justify-content-center">
+            <img class="startingimg" src="{%static 'images/sea.jpg'%}"/>
+            <section class="heading text-center">
+                <h1 class="cinzel-font">Contact Me</h1>
+                <h6 class="fw-normal text-white">I'd Love to Hear From You!</h6>
+              </section>
+            <div class="container-fluid">
+            <div class=" contactcards row d-flex justify-content-center">
+ 
+                <section class="contactinfo col-md-5 col-sm-12">
+                      <section class="communicationInfo text-center">
+                        <span class="fa-solid fa-phone"></span>
+                        <h2>Talk to me</h2>
+                        <p>to reach to me personally and faster:</p>
+                        <a href="callto:+966538562411"><i class="fa-solid fa-square-phone"></i> +966 538562411</a>
+                        <a href="mailto:Aomsh1420@gmail.com"><i class="fa-solid fa-envelope"></i> Aomsh1420@gmail.com</a>
+                    </section>
+                </section>
+                <section class="form col-md-5 col-sm-12 text-center pt-3">
+                    <span  class="fa-brands fa-letterboxd"></span>
+                        <h2>Send to me</h2>
+                        <p>to share your thougts peacefully:</p>
+                        <div class="form-container">
+           
+                            <form action="{% url 'main:contact_view'%}" method="POST">
+                                {% csrf_token %}
+                
+                                <div class="row mb-3">
+                                    <div class=" col-md-12">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                </div>
+                
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="message" rows="4" name="message" placeholder="Your Massege" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="submit" class="btn btn-secondary" value="Submit"/>
+                                </div>
+                            </form>
+                        </div>
+                </section>
+            </div>
+        </div>
+          
+          </section>
+        </div>     
+          {%endblock%}
+      

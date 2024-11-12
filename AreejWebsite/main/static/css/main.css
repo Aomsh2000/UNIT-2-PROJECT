@@ -1,0 +1,192 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+header{
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.466);
+    color: white;
+}
+nav{
+    gap: 2rem;
+}
+
+nav a{
+    background-color: rgba(240, 248, 255, 0.507);
+    border: #cfd3d5 solid 1px;
+    border-radius: 80px;
+    padding: 0.3rem 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+}
+nav a:hover{
+    text-decoration: none;
+    background-color: aliceblue;
+    color:rgb(0, 44, 140);
+}
+.careerlink{
+    background-color:rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+}
+.contactlink{
+    background-color: aliceblue;
+    justify-items: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.cinzel-font {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+main{
+    height: 100%;
+}
+.wrapper{
+    background-color: rgba(0, 0, 0, 0.466);
+    height: 100vh;
+    color: white;
+}
+
+.video-background{
+    height: 60vh;
+}
+#background-video {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 100%;
+    height: 83vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.welcoming{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+    padding-top: 1rem;
+    color: white;
+}
+
+.welcoming h1{
+    font-size: 4rem;
+}
+.filter {
+    gap:1rem;
+}
+.filter a{
+    font-weight: bold;
+    color: #6c757d;
+    border-radius: 80px;
+    padding:  0.5rem 0.8rem;
+    text-decoration: none;
+}
+.filter a:focus{
+    color: rgb(0, 44, 140);
+    background-color: #cfd3d5;
+}
+.filtercontent{
+    gap: 2rem;
+}
+.card {
+
+    padding: 0;
+    border-radius: 10px;
+}
+.cardimg{
+    height: 30vh;
+    width: 100%;
+   
+    
+}
+.cardbody{
+    padding: 1rem;
+}
+.cardimg img{
+    height: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.explorelink a{
+    text-decoration: none;
+    color: #6c757d;
+    
+}
+
+
+footer{
+    color: whitesmoke;
+}
+.social-container{
+    gap: 2rem; 
+}
+
+
+/*Contact page*/
+.startingimg{
+   height: 41vh;
+   width: 100%;
+   object-fit: cover;
+   position: absolute;
+   z-index: -1;
+}
+.heading{
+    padding-top: 6%;
+    padding-bottom: 8%;
+    height: 41vh;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.500);
+    width: 100%;
+    color: white;
+}
+
+.contactcards{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30vh;
+    gap: 1rem;
+    height: fit-content;
+}
+.contactinfo ,.form{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.200);
+    height:auto;
+    background-color: white;
+}
+
+.communicationInfo{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+}
+
+.communicationInfo span{
+    font-size: 2.5rem;
+}
+.form span{
+    font-size: 2.5rem;
+}
+.btn{
+    background-color: rgba(240, 248, 255, 0.507);
+    border: #cfd3d5 solid 1px;
+    border-radius: 80px;
+    padding: 0.3rem 1rem;
+    color: black;
+}

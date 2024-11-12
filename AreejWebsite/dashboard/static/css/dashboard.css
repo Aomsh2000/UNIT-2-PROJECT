@@ -1,0 +1,78 @@
+.sidebar{
+    height:auto;
+    flex-grow: 1;
+}
+.sidebarlogo{
+ display: flex;
+ flex-direction: row;
+ gap: 1rem;
+}
+
+.dashboardcontent{
+    display: flex;
+    flex-direction: column;   
+    min-height: 90.4vh;   
+   
+}
+
+.dashboardcontent h1{
+    font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dashboardcontent h2{
+    font-size: 2.5rem;
+            font-weight: 300;
+            margin: 10px 0;
+}
+
+.min-vh-48{
+    min-height: 48vh;
+}
+
+.social-container a {
+    color: #007bff;
+    transition: color 0.3s ease ;
+}
+
+.social-container a:hover {
+    color: #0056b3;
+}
+
+
+.action-button-success {
+    background-color: #28a745; 
+    color: white; 
+    transition: background-color 0.3s ease
+}
+
+.action-button-success:hover {
+    background-color: #218838; 
+
+}
+
+
+.action-button-warning {
+    background-color: #ffc107; 
+    color: white; 
+    transition: background-color 0.3s ease
+}
+
+.action-button-warning:hover {
+    background-color: #e0a800; 
+
+}
+
+
+
+.action-button-danger {
+    background-color: #dc3545; 
+    color: white; 
+    transition: background-color 0.3s ease
+}
+
+.action-button-danger:hover {
+    background-color: #c82333; 
+
+}

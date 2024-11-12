@@ -1,0 +1,69 @@
+{% extends 'dashboard/base.html'%}
+{%load static%}
+
+    {%block title%}<title>Dashboard | Update Interest</title>{%endblock%}
+    {% block home_button_active%}{%endblock%}
+    {% block interest_button_active%}active{%endblock%}
+     {%block content%}
+      <!--content-->
+      <div class="d-flex flex-column w-100 dashboardcontent justify-content-start">
+        <div class="container mt-3">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <div class="d-flex flex-column justify-content-start text-start">
+                <h6>Update Interest</h6>
+                <p><a href="{%url 'dashboard:dashboard_view'%}">Home</a> <i class="fa-solid fa-chevron-right"></i><a href="{%url 'dashboard:interests_view'%}"> Interests</a>  <i class="fa-solid fa-chevron-right"></i> Update Interest</p>                
+            </div>
+            <div class="d-flex flex-column rounded py-3 px-2 shadow-sm mb-3 ">
+               
+                <section class="heading text-start ">
+                    <h4>Update Interest</h4>
+                </section>
+          
+                 <div class="container my-5">
+                    <div class="form-container">
+   
+                        <form action="{%url 'dashboard:update_interest_view' interest.id %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+            
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject:</label>
+                                <input type="text" class="form-control" id="subject" name="subject" value="{{interest.subject}}" required>
+                            </div>
+            
+                            <div class="mb-3">
+                                <label for="about" class="form-label">About:</label>
+                                <textarea class="form-control" id="about" rows="4" name="about" required>{{interest.about}}</textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="sources" class="form-label">Sources:</label>
+                                <textarea class="form-control" id="sources" rows="4" name="sources">{{interest.sources}}</textarea>
+                            </div>
+            
+                            <div class="mb-3 d-flex flex-column">
+                                <label for="image" class="form-label">Image</label>
+                                <img src="{{interest.image.url}}" style="width: 70px; height: 60px;" class="py-1"/>
+                                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                            </div>
+            
+                            <div class="d-flex justify-content-between">
+                                <input type="submit" value="Update Interest" class="btn btn-primary"/>
+                                <a href="{%url 'dashboard:interests_view'%}" class="btn btn-danger">Cancel</a>
+                            </div>
+                        </form>
+            </div>
+        </div>
+            </div>
+
+          </div>
+      </div>
+          {%endblock%}
+      

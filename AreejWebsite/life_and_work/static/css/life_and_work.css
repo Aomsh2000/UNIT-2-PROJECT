@@ -1,0 +1,85 @@
+.pageinfo{
+   min-height: 49vh;
+}
+
+
+.cv-container{
+    min-height: 49vh;
+}
+
+.table-edu-img{
+    height:7rem;
+    width: 7rem;
+    background-image: url('../images/taibah.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.table-exp1-img{
+    height:7rem;
+    width: 7rem;
+    background-image: url('../images/qeyammuna.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.table-exp2-img{
+    height:7rem;
+    width: 7rem;
+    background-image: url('../images/solarenergy.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+tbody tr{
+    min-height: 10rem;
+}
+
+.table-pro-img{
+    height:7rem;
+    width: 7rem;
+}
+
+.table-pro-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 80px;
+}
+
+
+
+.carousel-inner{
+    height: 70vh;
+    border-radius: 30px;
+}
+.carousel-item{
+    height: 100%;
+}
+
+.memories-container{
+    background-color: antiquewhite;
+    height: 70vh;
+}
+
+.memories-text{
+    height: 40vh;
+    margin-right: 1.5rem;
+}
+
+.interests-container{
+    background-color: beige;
+    min-height: 70vh;
+}
+
+.card-img-top-container{
+    height: 13rem;
+}
+.card-img-top{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+

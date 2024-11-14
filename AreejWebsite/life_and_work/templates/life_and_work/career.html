@@ -1,0 +1,115 @@
+{% extends 'main/base.html'%}
+{%load static%}
+
+    {%block title%}<title>My Career</title>{%endblock%}
+    {%block head%}
+    <link href="{%static 'css/life_and_work.css'%}" rel="stylesheet"/>
+    {%endblock%}
+     {%block content%}
+
+      
+     {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    <div class="container-fluid w-100 ">
+        <section class=" d-flex justify-content-center">
+            <img class="startingimg" src="{%static 'images/sea-turtle.jpg'%}"/>
+            <section class="heading text-center">
+                <h1 class="cinzel-font">Let's Dive </h1>
+                <h6 class="fw-normal text-white">in work!</h6>
+              </section>
+            <div class="container-fluid">
+            <div class=" pagescards row d-flex justify-content-center">
+ 
+                <section class="pageinfo col-md-12 col-sm-12">
+                      <section class="cv-container text-center pt-2">
+                        <div class="d-flex gap-3 justify-content-between p-5">
+                            <div class="d-flex gap-3 align-items-center">
+                                <h4><i class="fa-solid fa-fish text-primary"></i></h4>
+                                <h6>brife about me in functional way</h6>
+                            </div>
+                            <a href="" class="btn ">Download CV</a>                         
+                        </div>
+                       
+                        <table class="container-fluid ">
+                            <thead class="border-bottom border-top">
+                                <th colspan="2" class="text-start"><h3 class="cinzel-font">Education</h3></th>
+                            </thead>
+                            <tbody class="">
+                                <tr class="row">
+                                    <td class="col-md-6 text-start align-middle py-3">
+                                      Talk about my education Talk about my education Talk about my education
+                                      Talk about my education Talk about my education Talk about my education
+                                      Talk about my education Talk about my education Talk about my education
+                                    </td>
+                                    <td colspan="2" class="col-md-6 d-flex justify-content-center align-items-center mb-3">
+                                      <div class="table-edu-img rounded-circle"></div>
+                                    </td>
+                                </tr>    
+                            </tbody>
+
+                            <thead class="border-bottom border-top">
+                                <th colspan="2" class="text-start"><h3 class="cinzel-font">Experience</h3></th>
+                            </thead>
+                            <tbody class="">
+                                <tr class="row">
+                                    <td class="col-md-6 text-start align-middle py-3">
+                                      Talk about my education Talk about my education Talk about my education
+                                      Talk about my education Talk about my education Talk about my education
+                                      Talk about my education Talk about my education Talk about my education
+                                    </td>
+                                    <td colspan="2" class="col-md-6 d-flex justify-content-center align-items-center gap-3 mb-3">
+                                      <div class="table-exp1-img rounded-circle"></div>
+                                      <div class="table-exp2-img rounded-circle"></div>
+                                    </td>
+                                </tr>    
+                            </tbody>
+                            <thead class="border-bottom border-top">
+                                <th colspan="2" class="text-start"><h3 class="cinzel-font">Projects</h3></th>
+                            </thead>
+                            <tbody class="">
+                                <tr class="row d-flex justify-content-center align-items-center ">
+                                    <td class="col-md-4 text-start align-middle py-3 d-flex flex-column justify-content-center align-items-center text-center">
+                                        <div class="table-pro-img rounded-circle mb-3">
+                                            <img src="{% static 'images/sea-turtle.jpg' %}"/>
+                                        </div>
+                                        <h6>Name of project</h6>
+                                        <p>description</p>
+                                        <a href="">link</a>
+                                    </td>
+                                    <td class="col-md-4 text-start align-middle py-3 d-flex flex-column justify-content-center align-items-center text-center">
+                                        <div class="table-pro-img rounded-circle mb-3">
+                                            <img src="{% static 'images/sea-turtle.jpg' %}"/>
+                                        </div>
+                                        <h6>Name of project</h6>
+                                        <p>description</p>
+                                        <a href="">link</a>
+                                    </td>
+                                    <td class="col-md-4 text-start align-middle py-3 d-flex flex-column justify-content-center align-items-center text-center">
+                                        <div class="table-pro-img rounded-circle mb-3">
+                                            <img src="{% static 'images/sea-turtle.jpg' %}"/>
+                                        </div>
+                                        <h6>Name of project</h6>
+                                        <p>description</p>
+                                        <a href="">link</a>
+                                    </td>
+                                </tr>    
+                            </tbody>
+                        </table>
+                    </section>
+                </section>
+               
+            </div>
+        </div>
+          
+          </section>
+        </div>     
+          {%endblock%}
+      

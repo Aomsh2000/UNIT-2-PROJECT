@@ -10,26 +10,37 @@
     
     
       <main>
-        <div class="video-background">
+        <div class="video-background container-fluid d-flex flex-column">
             <video autoplay muted loop id="background-video" preload="auto">
-                <source src="{%static 'videos/waves.mp4' %}" type="video/mp4">
+                <source src="https://s3.filebin.net/filebin/127213b49548e70e3ab7bec81c6fd58a66d483d10d12064c192dbb7b0e52bbee/c75db205edc18af3afc87661965b2dcfdf6bb975046e246802f28816abe1dafe?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7pMj6hGeoKewqmMQILjm%2F20241114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241114T072110Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&response-cache-control=max-age%3D60&response-content-disposition=filename%3D%22waves.mp4%22&response-content-type=video%2Fmp4&X-Amz-Signature=f9d638e0a7e8f1f0d986f5ac5b6e090bed8d73aef5dc5383b0c3c11da8964048" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <section class="welcoming  ">
-                <h1 class="cinzel-font ">Hi, everyone</h1>
-                <h3 class="cinzel-font">I'm Areej Shareefi</h3>
-                <p>About me About me About me About me About me About me About me About me
-                    About me About me About me About me </p>
-   
-            </section> 
+            <section class="welcoming d-flex align-items-center gap-3 justify-content-between pt-1 px-5">
+                <div class="d-flex flex-column col-md-6">
+                    <h1 class="cinzel-font">Hi, everyone</h1>
+                    <h3 class="cinzel-font">I'm Areej Shareefi</h3>
+                </div>
+                
+                <p class="col-md-6 pt-1">
+                    About me About me About me About me About me About me About me About me
+                    About me About me About me About me
+                </p>
+            </section>
+            
         </div>
-
-
+        <div class="container">
+            <section class="welcomingbutton-container row d-flex justify-content-center pt-md-5 pt-sm-1">
+                <button class="btn welcomingbutton   col-md-5">Know about me more <span class="material-symbols-outlined">
+                    keyboard_double_arrow_down
+                    </span></button>
+             </section>
+        </div>
+       
           <section class="container  my-5">
-            <div class="filter row justify-content-center d-flex  ">
+            <div class="filter  justify-content-center d-flex  ">
                 <div><a href="" class="col-sm-3 text-center"><i class="fa-solid fa-star"></i> Projects </a></div>
-                <div><a href="" class="col-sm-3 text-center"><i class="fa-solid fa-pen"></i> Memos </a></div>
-                <div><a href="" class="col-sm-3 text-center"><i class="fa-solid fa-heart"></i> Intrests </a></div>
+                <div ><a href="" class="col-sm-3 text-center"><i class="fa-solid fa-pen"></i> Memos </a></div>
+                <div ><a href="" class="col-sm-3 text-center"><i class="fa-solid fa-heart"></i> Intrests </a></div>
             </div>
           </section>
 

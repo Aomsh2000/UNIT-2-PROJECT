@@ -1,0 +1,52 @@
+{% extends 'main/base.html'%}
+{%load static%}
+
+    {%block title%}<title>Memory</title>{%endblock%}
+    {%block head%}
+    <link href="{%static 'css/life_and_work.css'%}" rel="stylesheet"/>
+    {%endblock%}
+     {%block content%}
+
+
+    <div class="container-fluid w-100 ">
+        <section class=" d-flex justify-content-center">
+            <img class="startingimg" src="{%static 'images/underwater.jpg'%}"/>
+            <section class="heading text-center">
+                <h1 class="cinzel-font">Let's Share </h1>
+                <h6 class="fw-normal text-white">my thougts and feelings!</h6>
+              </section>
+            <div class="container-fluid">
+                <div class=" pagescards row d-flex justify-content-center">
+ 
+                    <section class="pageinfo col-md-12 col-sm-12 container">
+                        <h2 class="cinzel-font mb-2 mt-2 text-center border-bottom">My memories</h2>
+                        <div class="detailcontent d-flex mt-4 justify-content-between row" >
+                            <div class="sidecontent d-flex flex-column col-md-3">
+                                <h6>Category:</h6>
+                                <h6>link:</h6>
+                                <h6>Somthing:</h6>
+                            </div>
+                            <div class="maincontent mt-sm-2 col-md-9 d-flex justify-content-start align-items-start gap-3">
+                                
+                                <h4><i class="fa-solid fa-fish text-primary"></i></h4>
+                                <p>main pragraph main pragraph main pragraph main pragraph 
+                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
+                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
+                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
+                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
+                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
+                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
+                                </p>
+                            </div>
+
+                        </div>
+                        
+                    </section>
+               
+               </div>
+            </div>
+          
+        </section>
+    </div>     
+          {%endblock%}
+      

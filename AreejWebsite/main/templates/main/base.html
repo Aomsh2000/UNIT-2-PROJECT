@@ -15,12 +15,23 @@
     {%block head%}{%endblock%}
 </head>
 <body>
+  {%block header%}
+  <header class="d-flex justify-content-between">
+   
+    <a href="/"><h5 class="d-flex justify-content-center cinzel-font align-items-center"> <span class="material-symbols-outlined rounded-circle p-1">tsunami</span> Areej</h5></a>
+  <nav class="d-flex justify-content-center">
+    <a href="{%url 'life_and_work:career_view'%}" class="careerlink">Career</a>
+    <a href="{%url 'life_and_work:freespace_view'%}">Free Space</a>
+    <a href="{%url 'main:contact_view'%}" class="">Contact</a>
+  </nav>
+</header>
+{%endblock%}
     {%block content%}
    
          {%endblock%}
 
-      <footer class="bg-dark d-flex justify-content-between justify-content-center pt-3">
-            <p class=" col-md-6 mb-3"> Site by Areej Shareefi</p>
+      <footer class="bg-dark d-flex justify-content-between justify-content-center pt-3 px-1">
+            <p class=" col-md-6 mb-3 fs-small"> Site by Areej Shareefi</p>
             <div class="social-container d-flex col-md-6 justify-content-end">
                 <p>Follow me: </p>
                 <a href="" ><i class="fa-brands fa-square-facebook "></i></a>

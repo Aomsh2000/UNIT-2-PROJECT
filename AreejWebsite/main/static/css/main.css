@@ -75,7 +75,7 @@ main{
 }
 
 .video-background{
-    height: 48vh;
+    min-height: 48vh;
 }
 #background-video {
     position: absolute;
@@ -103,13 +103,18 @@ main{
 .welcoming h1{
     font-size: 4rem;
 }
+
 .welcomingbutton{
-    
+    text-decoration: none;
+   z-index: 10;
+   background-color: rgb(240, 248, 255);
+    border: #cfd3d5 solid 1px;
+    border-radius: 80px;
+    padding: 0.3rem 1rem;
+    color: black;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.welcomingbutton button{
-   background-color: aliceblue;
-}
 .filter {
     gap:1rem;
 }
@@ -128,6 +133,10 @@ main{
 }
 .filter a:hover i{
     color: #0056b3;
+    background-color: #ededed;
+}
+.focused{
+    color: #000000;
     background-color: #ededed;
 }
 .filtercontent{
@@ -157,8 +166,14 @@ main{
 
 .explorelink a{
     text-decoration: none;
-    color: #6c757d;
-    
+    color: #6c757d; 
+    transition: color 0.3s ease;
+
+}
+
+.explorelink a:hover{
+    text-decoration: none;
+    color: #0056b3; 
 }
 
 
@@ -220,6 +235,8 @@ footer{
 .form span{
     font-size: 2.5rem;
 }
+
+
 .btn{
     background-color: rgba(240, 248, 255, 0.507);
     border: #cfd3d5 solid 1px;

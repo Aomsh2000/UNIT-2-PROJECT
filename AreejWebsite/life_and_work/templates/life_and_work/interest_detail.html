@@ -10,32 +10,34 @@
 
     <div class="container-fluid w-100 ">
         <section class=" d-flex justify-content-center">
-            <img class="startingimg" src="{%static 'images/underwater.jpg'%}"/>
+            <img class="startingimg" src="{{interest.image.url}}"/>
             <section class="heading text-center">
-                <h1 class="cinzel-font">Let's Share </h1>
-                <h6 class="fw-normal text-white">my thougts and feelings!</h6>
+                <h1 class="cinzel-font">{{interest.subject}}</h1>
               </section>
             <div class="container-fluid">
                 <div class=" pagescards row d-flex justify-content-center">
  
                     <section class="pageinfo col-md-12 col-sm-12 container">
-                        <h2 class="cinzel-font mb-2 mt-2 text-center border-bottom">My memories</h2>
                         <div class="detailcontent d-flex mt-4 justify-content-between row" >
                             <div class="sidecontent d-flex flex-column col-md-3">
-                                <h6>Category:</h6>
-                                <h6>link:</h6>
-                                <h6>Somthing:</h6>
+                                <div>
+                                    <h6 class=""><strong class="text-primary">Resources I Used:</strong></h6>
+                                    <ul>
+                                    {%for source in orgnized_sources%}
+                                    <li>{{source}}</li>
+                                    {%endfor%}
+                                    </ul>
+                                </div>
+                               
+                                
+                                
+                                
+                               
+                                <h6><strong class="text-primary">Date:</strong> <small class="text-muted">{{interest.created_at}}</small></h6>
                             </div>
                             <div class="maincontent mt-sm-2 col-md-9 d-flex justify-content-start align-items-start gap-3">
                                 
-                                <h4><i class="fa-solid fa-fish text-primary"></i></h4>
-                                <p>main pragraph main pragraph main pragraph main pragraph 
-                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
-                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
-                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
-                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
-                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
-                                    main pragraph main pragraph main pragraph main pragraph main pragraph 
+                                <p><strong class="text-primary">|   </strong>{{interest.about}} 
                                 </p>
                             </div>
 

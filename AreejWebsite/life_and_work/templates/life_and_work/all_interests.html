@@ -1,0 +1,117 @@
+{% extends 'main/base.html'%}
+{%load static%}
+
+    {%block title%}<title>My Interests</title>{%endblock%}
+    {%block head%}
+    <link href="{%static 'css/life_and_work.css'%}" rel="stylesheet"/>
+    {%endblock%}
+     {%block content%}
+
+      
+     {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+    <div class="container-fluid w-100 ">
+        <section class=" d-flex justify-content-center">
+            <img class="startingimg" src="{%static 'images/yfish.jpg'%}"/>
+            <section class="heading text-center">
+                <h1 class="cinzel-font">Let's See </h1>
+                <h6 class="fw-normal text-white">My Interests and Hobbies</h6>
+              </section>
+            <div class="container-fluid">
+                <div class=" pagescards row d-flex justify-content-center">
+ 
+                    <section class="pageinfo col-md-12 col-sm-12">
+                        
+                                <section class="interests-container mt-5 mb-3 container">
+                                    
+                                    <div class="h-100 row gap-3 d-flex justify-content-center">
+                                        {%for inter in interests%} 
+                                        <div class="card col-md-4" style="width: 18rem; ">
+                                            <div class="card-img-top-container">
+                                                <img src="{{inter.image.url}}" class="card-img-top" alt="Card image">
+                                            </div>
+                                            <div class="card-body">
+                                            <h5 class="card-title">{{inter.subject}}</h5>
+                                            <p class="card-text">{{inter.about|truncatechars:50}}</p>
+                                            <a href="{%url 'life_and_work:interest_detail_view' inter.id %}" class="cinzel-font btn btn-primary ">More..</a>
+                                            </div>
+                                        </div>
+                                        {%endfor%}
+                                       
+                                    </div>
+                                </section>
+                                 <!--pagination-->
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                    
+                                        {% if interests.has_previous %}
+                                            <li class="page-item">
+                                                <a class="page-link" href="?page=1" aria-label="First">
+                                                    <span aria-hidden="true"> First</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="?page={{ interests.previous_page_number }}" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        {% else %}
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true"> First</span>
+                                            </li>
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&laquo;</span>
+                                            </li>
+                                        {% endif %}
+                            
+                                        {% for num in interests.paginator.page_range %}
+                                            {% if num == interests.number %}
+                                                <li class="page-item active" aria-current="page">
+                                                    <span class="page-link">{{ num }}</span>
+                                                </li>
+                                            {% else %}
+                                                <li class="page-item">
+                                                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                
+                                        {% if interests.has_next %}
+                                            <li class="page-item">
+                                                <a class="page-link" href="?page={{ interests.next_page_number }}" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="?page={{ interests.paginator.num_pages }}" aria-label="Last">
+                                                    <span aria-hidden="true">Last </span>
+                                                </a>
+                                            </li>
+                                        {% else %}
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">&raquo;</span>
+                                            </li>
+                                            <li class="page-item disabled">
+                                                <span class="page-link" aria-hidden="true">Last</span>
+                                            </li>
+                                        {% endif %}
+                                    </ul>
+                                </nav>                                                                      
+                        
+                    </section>
+               
+               </div>
+            </div>
+          
+        </section>
+    </div>     
+          {%endblock%}
+      

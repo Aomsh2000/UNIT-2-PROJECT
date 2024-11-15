@@ -57,8 +57,12 @@ tbody tr{
     height: 100%;
 }
 
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.558);
+    border-radius: 20px;
+}
+
 .memories-container{
-    background-color: antiquewhite;
     height: 70vh;
 }
 
@@ -68,7 +72,6 @@ tbody tr{
 }
 
 .interests-container{
-    background-color: beige;
     min-height: 70vh;
 }
 
@@ -79,6 +82,18 @@ tbody tr{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.sidecontent{
+    row-gap: 2rem;
+}
+
+.pagination .page-item {
+    border-radius: 0 !important;
+}
+
+.pagination .page-link {
+    border-radius: 0 !important;
 }
 
 

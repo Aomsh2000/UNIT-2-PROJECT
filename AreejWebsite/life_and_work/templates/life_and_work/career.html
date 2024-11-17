@@ -1,117 +1,97 @@
 {% extends 'main/base.html'%}
-{%load static%}
+{% load static %}
 
-    {%block title%}<title>My Career</title>{%endblock%}
-    {%block head%}
-    <link href="{%static 'css/life_and_work.css'%}" rel="stylesheet"/>
-    {%endblock%}
-     {%block content%}
+{% block title %}
+<title>My Career</title>
+{% endblock %}
 
-      
-     {% if messages %}
-            <div class="messages">
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
+{% block head %}
+<link href="{% static 'css/life_and_work.css' %}" rel="stylesheet"/>
+{% endblock %}
 
-    <div class="container-fluid w-100 ">
-        <section class=" d-flex justify-content-center">
-            <img class="startingimg" src="{%static 'images/sea-turtle.jpg'%}"/>
-            <section class="heading text-center">
-                <h1 class="cinzel-font">Let's Dive </h1>
-                <h6 class="fw-normal text-white">in work!</h6>
-              </section>
-            <div class="container-fluid">
-            <div class=" pagescards row d-flex justify-content-center">
- 
+{% block content %}
+<div class="container-fluid w-100">
+    <section class="d-flex justify-content-center">
+        <img class="startingimg" src="{% static 'images/sea-turtle.jpg' %}"/>
+        <section class="heading text-center ">
+            <h1 class="cinzel-font animate__animated animate__fadeInUp">Let's Dive</h1>
+            <h6 class="fw-normal text-white animate__animated animate__fadeInUp">in work!</h6>
+        </section>
+        <div class="container-fluid">
+            <div class="pagescards row d-flex justify-content-center">
                 <section class="pageinfo col-md-12 col-sm-12">
-                      <section class="cv-container text-center pt-2">
+                    <section class="cv-container text-center pt-2">
                         <div class="d-flex row p-4">
-                            <div class="d-flex gap-3 align-items-center col-md-9 col-sm-12  ">
+                            <div class="d-flex gap-3 align-items-center col-md-9 col-sm-12">
                                 <h4><i class="fa-solid fa-fish text-primary"></i></h4>
-                                <h6 class="text-start ">Recent graduate student. I am heading more toward data science and software engineering.</h6>
+                                <h6 class="text-start animate-on-scroll">Recent graduate student. I am heading more toward data science and software engineering.</h6>
                             </div>
-                            <a href="{%static 'files/Areej_Shareefi_CV_72024.pdf'%}" download class="btn col-md-3 col-sm-12 mt-2 h-25 ">Download CV</a>                         
+                            <a href="{% static 'files/Areej_Shareefi_CV_72024.pdf' %}" download class="btn col-md-3 col-sm-12 mt-2 h-25 ">Download CV</a>
                         </div>
-                       
-                        <table class="container-fluid ">
-                            <thead class="border-bottom border-top">
+                        <table class="container-fluid">
+                            <thead class="border-bottom border-top animate-on-scroll">
                                 <th colspan="2" class="text-start"><h3 class="cinzel-font">Education</h3></th>
                             </thead>
-                            <tbody class="">
+                            <tbody class="animate-on-scroll">
                                 <tr class="row">
                                     <td class="col-md-6 text-start align-middle py-3">
-                                        <strong>Taibah University - Medina, Saudi Arabia</strong> 
-                                        <br/>
-                                        bachelor's degree, College of Computer Science and Engineering - Department of Computer Information Systems, 06/2023 
-                                        <br/>
-                                      •	GPA 4.93 out of 5.00 - First class honours                                     
+                                        <strong>Taibah University - Medina, Saudi Arabia</strong>
+                                        <br />
+                                        bachelor's degree, College of Computer Science and Engineering - Department of Computer Information Systems, 06/2023
+                                        <br />
+                                        • GPA 4.93 out of 5.00 - First class honours
                                     </td>
                                     <td colspan="2" class="col-md-6 d-flex justify-content-center align-items-center mb-3">
-                                      <div class="table-edu-img rounded-circle"></div>
+                                        <div class="table-edu-img rounded-circle animate-on-scroll"></div>
                                     </td>
-                                </tr>    
+                                </tr>
                             </tbody>
 
-                            <thead class="border-bottom border-top">
+                            <thead class="border-bottom border-top animate-on-scroll">
                                 <th colspan="2" class="text-start"><h3 class="cinzel-font">Experience</h3></th>
                             </thead>
-                            <tbody class="">
+                            <tbody class="animate-on-scroll">
                                 <tr class="row">
                                     <td class="col-md-6 text-start align-middle py-3">
-
-                                        <strong>Data analyst, 07/2022 - 7/2024 </strong><br/>
+                                        <strong>Data analyst, 07/2022 - 7/2024</strong><br />
                                         • Quwa Altaqah Alshamsiah Trading Institution, Medina, Saudi Arabia
-                                        
-                                        <br/>
-                                        <br/>
-                                        <strong>Project Supervisor, 07/2023 - 08/2023 </strong><br/>
-                                        • Qeyamuna Charitable Society for Community Service, Medina , Saudi Arabia
-                                        
-                                        <br/>
-                                        <br/>
-                                        <strong>Intern, 07/2022 - 08/2022 </strong><br/>
-                                        • Qeyamuna Charitable Society for Community Service, Medina , Saudi Arabia
-                                        
-
-                                        
+                                        <br />
+                                        <strong>Project Supervisor, 07/2023 - 08/2023</strong><br />
+                                        • Qeyamuna Charitable Society for Community Service, Medina, Saudi Arabia
                                     </td>
                                     <td colspan="2" class="col-md-6 d-flex justify-content-center align-items-center gap-3 mb-3">
-                                      <div class="table-exp1-img rounded-circle"></div>
-                                      <div class="table-exp2-img rounded-circle"></div>
+                                        <div class="table-exp1-img rounded-circle"></div>
+                                        <div class="table-exp2-img rounded-circle"></div>
                                     </td>
-                                </tr>    
+                                </tr>
                             </tbody>
-                            <thead class="border-bottom border-top" id="projects-area">
+                            <thead class="border-bottom border-top animate-on-scroll" id="projects-area">
                                 <th colspan="2" class="text-start"><h3 class="cinzel-font">Projects</h3></th>
                             </thead>
-                            <tbody class="">
-                                <tr class="row d-flex justify-content-center align-items-center ">
-                                {%for project in projects%}
+                            <tbody class="animate-on-scroll">
+                                <tr class="row d-flex justify-content-center align-items-center">
+                                    {% for project in projects %}
                                     <td class="col-md-4 text-start align-middle py-3 d-flex flex-column justify-content-center align-items-center text-center">
                                         <div class="table-pro-img rounded-circle mb-3">
-                                            <img src="{{project.image.url}}"/>
+                                            <img src="{{ project.image.url }}" />
                                         </div>
-                                        <h6>{{project.name}}</h6>
-                                        <small class="text-muted">{{project.created_at|truncatechars:12}}</small>
-                                        <p>{{project.description}}</p>
-                                        <a href="{{project.link}}" class="btn">Visit</a>
+                                        <h6>{{ project.name }}</h6>
+                                        <small class="text-muted">{{ project.created_at|truncatechars:12 }}</small>
+                                        <p>{{ project.description }}</p>
+                                        <a href="{{ project.link }}" class="btn">Visit</a>
                                     </td>
-                                    {%endfor%}
-                                </tr>    
+                                    {% endfor %}
+                                </tr>
                             </tbody>
                         </table>
                     </section>
                 </section>
-               
             </div>
         </div>
-          
-          </section>
-        </div>     
-          {%endblock%}
-      
+    </section>
+</div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

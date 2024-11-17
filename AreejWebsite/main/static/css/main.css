@@ -16,17 +16,22 @@ header a{
 header a h5{
     gap: 1rem;
     color: white;
-    
+    transition: transform 0.3s ease;
 }
 header a h5 span{
     color: black;
     background-color: white;
     transition: color 0.3s ease;
 }
-
-header a h5 span:hover{
+header a:hover span{
     color: #0056b3;
 }
+header a:hover h5{
+
+    transform: scale(1.1);
+}
+
+
 nav{
     gap: 2rem;
 }
@@ -95,6 +100,7 @@ main{
     width: 100%;
     object-fit: cover;
     min-height:59.6vh;
+    max-height: 59.6vh;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.500);
     color: white;
@@ -179,10 +185,19 @@ main{
 
 footer{
     color: whitesmoke;
+
 }
 .social-container{
     gap: 1rem;
+}
+.social-container a{
+    color: whitesmoke;
+    transition: ease 0.3s color;
 
+}
+
+.social-container a:hover{
+    color: #0056b3; 
 }
 
 /*Contact page*/

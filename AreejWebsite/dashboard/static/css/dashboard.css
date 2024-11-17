@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;   
     min-height: 90.4vh;   
-   
+
 }
 
 .dashboardcontent h1{
@@ -26,18 +26,30 @@
             font-weight: 300;
             margin: 10px 0;
 }
-
+.gradient-text {
+    background-image: linear-gradient(45deg, #00b4d8, #0077b6);
+    background-clip:text; 
+    color: transparent; 
+}
 .min-vh-48{
     min-height: 48vh;
 }
 
-.social-container a {
-    color: #007bff;
-    transition: color 0.3s ease ;
+footer{
+    color: whitesmoke;
+    
+}
+.social-container{
+    gap: 1rem;
+}
+.social-container a{
+    color: whitesmoke;
+    transition: ease 0.3s color;
+
 }
 
-.social-container a:hover {
-    color: #0056b3;
+.social-container a:hover{
+    color: #0056b3; 
 }
 
 

@@ -35,15 +35,48 @@ A personal website is website that represents you , your work , your career , yo
 - UML (shared as a link or uploaded as a file) - You can use Lucid Charts or similar online UML design tool.
 
 ## (Project Name)
-(project description here.)
+AreejWebsite
 
 ## Features List
-- (list of features)
+
+- Home Page:
+-introduction to reflect my identity and provide visitors with a general overview of who I am.
+
+- Career Page:
+- Detailed information about my career, including education, work experience, past projects, and future aspirations.
+- Display of my projects and achievements.
+- Information about the areas I am passionate about.
+
+- Memories Page:
+- Display personal memories that highlight significant moments in my life.
+- Ability to showcase memories with images and description.
+
+- Interests Page:
+- Showcase my personal interests.
+- Ability to like (Thumbs Up) specific interests 
+- Provide detailed information about the sources you use for each interest to help visitors learn more.
+
+- Contact Page:
+- A page that allows visitors to contact you directly through a contact form.
+- display contact information such as email or social media links.
+
+- Dashboard (Admin Panel):
+- Message Management: View and reply to incoming messages from visitors through their emails.
+
+- Memory Management: Add, edit, delete, or display memories + post it or no.
+- Project Management: Add, edit, delete, or display projects.
+- Interest Management: Add, edit, delete, or display interests + see visitor interactions with your interests.
+- Projects Management:Add, edit, delete, or display projects.
+
+- A seamless user experience that makes it easy to navigate between sections.
+
+- Implementation of security on adding information through forms 
+
 
 ## User Stories, Wireframes & UML links
-- (User stories document link here.)
-- (wireframe link here.)
-- (UML link here.)
+- user story: https://drive.google.com/file/d/1aO88IFSqpO_-mbVtcjFraJCuD-iEv6MS/view?usp=drive_link
+- Wireframes: https://drive.google.com/file/d/1E-r0yauqX3MlnDc-XAJpj81iua5NpioG/view?usp=drive_link
+- UML: https://drive.google.com/file/d/1yLQjsg4C8eYL93FXqATpbE01wGTt6blw/view?usp=drive_link
 
 
 ## Resources:

@@ -9,6 +9,7 @@ header{
     background-color: rgba(0, 0, 0, 0.466);
     color: white;
     height: 4.3rem;
+    
 }
 header a{
     text-decoration: none;
@@ -27,13 +28,13 @@ header a:hover span{
     color: #0056b3;
 }
 header a:hover h5{
-
     transform: scale(1.1);
 }
 
 
 nav{
     gap: 2rem;
+   
 }
 
 nav a{
@@ -43,14 +44,15 @@ nav a{
     padding: 0.3rem 1rem;
     font-weight: 500;
     text-decoration: none;
-    color: black;
+    color: black ;
+    z-index: 50;
     transition: color 0.3s ease, background-color 0.3s ease;
 
 }
 nav a:hover{
     text-decoration: none;
     background-color: aliceblue;
-    color:#0056b3;
+    color:#0056b3 !important;
 }
 
 .careerlink{
@@ -65,10 +67,21 @@ nav a:hover{
     gap: 0.5rem;
 }
 
-
-
-
+.navbar-collapse{
+    background-color: #00000000;
+}
+.navbar-collapse{
+    padding: 1rem;
+}
+.navbar-collapse.show {
+    background-color: #171717; 
+    z-index: 49; 
+    border-radius: 50px;
+}
       
+.navbar-collapse.show a{
+    padding-left: 1rem;
+} 
 
 .cinzel-font {
   font-family: "Cinzel", serif;

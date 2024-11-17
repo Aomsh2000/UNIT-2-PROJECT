@@ -18,17 +18,44 @@
 </head>
 <body>
   {%block header%}
-  <header class="d-flex justify-content-between">
+  <!--
+  <header class="d-flex justify-content-between navbar navbar-expand-lg">
    
     <a href="{%url 'main:home_view'%}" class="logo"><h5 class="d-flex justify-content-center cinzel-font align-items-center"> <span class="material-symbols-outlined rounded-circle p-1 ">tsunami</span> Areej</h5></a>
+    
   <nav class="d-flex justify-content-center">
-    <a href="{%url 'life_and_work:career_view'%}" class="careerlink">Career</a>
+    <a href="{%url 'life_and_work:career_view'%}" class="careerlink ">Career</a>
     <a href="{%url 'life_and_work:all_interests_view'%}" class="careerlink">Interests</a>
-    <a href="{%url 'life_and_work:freespace_view'%}">Memories</a>
+    <a href="{%url 'life_and_work:freespace_view'%}" class="">Memories</a>
     <a href="{%url 'main:contact_view'%}" class="">Contact</a>
   </nav>
 
+</header>-->
+<header class="d-flex justify-content-between navbar navbar-dark navbar-expand-lg">
+  <!-- Logo -->
+  <a href="{%url 'main:home_view'%}" class="logo navbar-brand d-flex justify-content-center align-items-center">
+      <h5 class="cinzel-font">
+          <span class="material-symbols-outlined rounded-circle p-1">tsunami</span> Areej
+      </h5>
+  </a>
+  
+  <!-- Navbar Toggle Button for Small Screens -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navigation Links (Collapsed on Small Screens) -->
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <nav class="navbar-nav justify-content-center">
+          <a href="{%url 'life_and_work:career_view'%}" class="nav-link careerlink text-white">Career</a>
+          <a href="{%url 'life_and_work:all_interests_view'%}" class="nav-link careerlink text-white">Interests</a>
+          <a href="{%url 'life_and_work:freespace_view'%}" class="nav-link text-dark">Memories</a>
+          <a href="{%url 'main:contact_view'%}" class="nav-link text-dark">Contact</a>
+      </nav>
+  </div>
+
 </header>
+
 
 {%endblock%}
     {%block content%}

@@ -34,6 +34,21 @@
                                 
                                
                                 <h6><strong class="text-primary">Date:</strong> <small class="text-muted">{{interest.created_at}}</small></h6>
+
+                                <form class="mb-3" id="like-form" method="post" action="{%url 'life_and_work:interest_detail_view' interest.id %}">
+                                    {% csrf_token %}
+                                    <strong>Are you interested?</strong>
+                                    <div class="radio-container d-flex gap-3 mt-2 justify-content-start">
+                                      <label class="custom-radio">
+                                        <input type="radio" name="like-radio" class="custom-radio-input" value="1">
+                                        <i class="fa fa-thumbs-up thumbs-up-icon"></i> 
+                                      </label>
+                                      <label class="custom-radio">
+                                        <input type="radio" name="like-radio" class="custom-radio-input" value="0">
+                                        <i class="fa fa-thumbs-down thumbs-down-icon"></i> 
+                                      </label>
+                                    </div>
+                                  </form>
                             </div>
                             <div class="maincontent mt-sm-2 col-md-9 d-flex justify-content-start align-items-start gap-3">
                                 
@@ -51,4 +66,19 @@
         </section>
     </div>     
           {%endblock%}
-      
+          {%block script%}
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const form = document.getElementById('like-form');
+              const radios = form.querySelectorAll('input[name="like-radio"]');
+              
+              radios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                  form.submit();
+                });
+              });
+            });
+          </script>
+          
+    {%endblock%}
+         

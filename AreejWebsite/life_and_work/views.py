@@ -35,7 +35,12 @@ def interest_detail_view(request:HttpRequest,interest_id):
     try:
         interest=Interest.objects.get(pk=interest_id) 
         orgnized_sources=interest.sources.split(',')  
-        print(orgnized_sources) 
+        if request.method == "POST":
+            like_value = request.POST.get('like-radio')
+
+            if like_value:
+               interest.num_interest = interest.num_interest + int(like_value)
+               interest.save()
         return render(request,"life_and_work/interest_detail.html",{"interest":interest,"orgnized_sources":orgnized_sources})
     except Interest.DoesNotExist:
         print("error massege")

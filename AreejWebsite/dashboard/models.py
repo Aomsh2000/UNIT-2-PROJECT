@@ -6,6 +6,7 @@ class Interest (models.Model):
     about=models.TextField()
     sources=models.TextField()
     image=models.FileField(upload_to="images/",default='images/default (2).jpg')
+    num_interest=models.IntegerField(default=0)
     created_at=models.DateTimeField(auto_now_add=True)
 
 

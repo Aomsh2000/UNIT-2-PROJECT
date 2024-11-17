@@ -95,5 +95,37 @@ tbody tr{
     border-radius: 0 !important;
 }
 
+.custom-radio-input {
+    display: none;
+  }
+.thumbs-up-icon {
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.3s ease;
+    margin-right: 8px;
+  }
+  
+  .custom-radio-input:checked + .thumbs-up-icon {
+    color: #4CAF50; 
+  }
+  
+  .custom-radio-input:hover + .thumbs-up-icon {
+    color: #388E3C; 
+  }
 
-
+ 
+.thumbs-down-icon {
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.3s ease;
+    margin-right: 8px;
+  }
+  
+  .custom-radio-input:checked + .thumbs-down-icon {
+    color: #f44336;
+  }
+  
+  .custom-radio-input:hover + .thumbs-down-icon {
+    color: #d32f2f; 
+  }
+      
